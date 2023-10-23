@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del contenedor del icono del menú y su contorno blanco transparente */
+.menu-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1;
+    /* Estilo del contorno blanco transparente alrededor del icono */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
+    padding: 5px; /* Espaciado interno para el icono del menú */
+    border-radius: 10%; /* Borde redondeado para el fondo blanco */
+}
+
+/* Estilo de las barras del icono del menú (sin cambios) */
+.menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: #000; /* Color negro para las barras del menú */
+    margin: 6px 0;
+    transition: 0.4s; /* Transición suave al hacer clic en el icono del menú */
+}
+
+/* Estilo del menú desplegable */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto fuera del área visible de la pantalla */
+    height: 100vh;
+    width: 250px;
+    background-color: #333; /* Color de fondo del menú */
+    padding-top: 60px; /* Espaciado superior para las opciones del menú */
+    transition: 0.3s; /* Transición suave al mostrar/ocultar el menú */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff; /* Color blanco para los enlaces del menú */
+    font-size: 20px;
+}
+
+/* Estilo del menú cuando está activo (visible) */
+.menu.active {
+    left: 0; /* Muestra el menú moviéndolo hacia la izquierda */
+}
